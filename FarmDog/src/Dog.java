@@ -8,8 +8,8 @@ abstract class Dog implements FarmDog {
 
     public Dog (int age){
         this.age = age;
-        h = FarmDog.state();
-        e = Eat.HUNGRY;
+        h = FarmDog.state(); //генерация состояния здоровья собаки
+        e = Eat.HUNGRY; //по умолчанию все с утра голодные
     }
 
     @Override
