@@ -1,4 +1,4 @@
-interface FarmDog {
+interface AnimalOnFarm {
     public enum Age {YOUNG, ADULT, OLD};
     public enum Health {HALE, ILL};
     public enum Train {TRAINED, UNTRAINED};
@@ -14,9 +14,7 @@ interface FarmDog {
 
     static Health state(){
         double s = Math.random();
-        if ((int)Math.round(s) == 1)
-            return Health.HALE;
-        else return Health.ILL;
+        return (int)Math.round(s) == 1 ? Health.HALE : Health.ILL;
     }
 
 }

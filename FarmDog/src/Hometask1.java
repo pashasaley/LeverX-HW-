@@ -1,4 +1,4 @@
-public class HT1 {
+public class Hometask1 {
     public static void main (String ... args){
         Dog[] dog = new Dog[10];
 
@@ -15,7 +15,7 @@ public class HT1 {
                 dog[i] = new OldDog(age);
             }
 
-            System.out.println("The age of a dog is " + age);
+            System.out.println("The age of years dog is " + age);
         }
 
         for (int i = 0; i<10; i++) {//кормежка всех собак
@@ -26,7 +26,7 @@ public class HT1 {
             dog[i].cure();
         }
 
-        FarmDog.clean();//очистка вольера
+        AnimalOnFarm.clean();//очистка вольера
 
         for (int i = 0; i<10; i++) {//собаки идут по своим делам :)
             dog[i].train();
