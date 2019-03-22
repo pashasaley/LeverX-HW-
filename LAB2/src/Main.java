@@ -9,11 +9,10 @@
 4. пофиксить до алмост идеала
 */
 
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Shell;
+import view.MainDisplay;
 
 public class Main {
     public static void main (String ... args){
-
+        MainDisplay mainDisplay = new MainDisplay();
     }
 }

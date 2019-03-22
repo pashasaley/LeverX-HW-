@@ -1,14 +1,6 @@
-package Model;
+package model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class CreateData {//rename
-    private String product;
-    private String maker;
-    private Integer UNP;
-    private String amount;
-
+public class Address {
     private String country;
     private String region;
     private String city;
@@ -16,58 +8,12 @@ public class CreateData {//rename
     private Integer house;
     private Integer flat;
 
-    private List<CreateData> records = new ArrayList<>();
-
-    public List<CreateData> getRecords() {
-        return records;
-    }
-
-    public void addRecord(CreateData record) {
-        records.add(record);
-    }
-
-    public void deleteRecord(CreateData record){
-        records.remove(record);
-    }
-
-    public String getProduct() {
-        return product;
-    }
-
-    public void setProduct(String product) {
-        this.product = product;
-    }
-
-    public String getMaker() {
-        return maker;
-    }
-
-    public void setMaker(String maker) {
-        this.maker = maker;
-    }
-
     public String getCountry() {
         return country;
     }
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public Integer getUNP() {
-        return UNP;
-    }
-
-    public void setUNP(Integer UNP) {
-        this.UNP = UNP;
-    }
-
-    public String getAmount() {
-        return amount;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
     }
 
     public String getRegion() {

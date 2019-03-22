@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="755f1803-99fd-48be-8033-b07a0b84eda3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../FinalTask/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/FinalTask.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/config/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/controller/ArticleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/controller/TagController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/model/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/model/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/model/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/repository/ArticleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/repository/TagRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/java/com/galayy/blog/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalTask/src/main/resources/database.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/MakerInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ProductInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/AddDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/DeleteDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Parameters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SearchDisplayNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/AdultDog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/AdultDog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/FarmDog$Age.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/FarmDog$Eat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/FarmDog$Health.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/FarmDog$Ration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/FarmDog$Train.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/FarmDog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/HT1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/OldDog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/OldDog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/YoungDog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/out/production/FarmDog/YoungDog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/src/AdultDog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/src/AdultDog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/src/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/src/Hometask1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/src/Hometask1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/src/OldDog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/src/OldDog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FarmDog/src/YoungDog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FarmDog/src/YoungDog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Files/src/Data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Records.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Records.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/next.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/next.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/previous.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/InputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/ReadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReadData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/AllRecords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AllInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ClassToAvoidDuplicates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/DisplayToAdd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/DisplayToDeleteNewest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/DisplayToSearchNew.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MainDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/RecordsTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ItemsTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/GeneralGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group4$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group5$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group5$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group5$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group5$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group5$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Group5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Groups.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/Groups.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/out/production/Groups/lab1/MainForGroups.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/Groups/src/lab1/Group6.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/Groups/src/lab1/Group6.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/AddDisplay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/ItemsTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Records.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2499">
+              <caret line="147" column="18" selection-start-line="147" selection-start-column="18" selection-end-line="147" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/AllInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/ReadData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/InputData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="63" column="64" selection-start-line="63" selection-start-column="64" selection-end-line="63" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/Parameters.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/MainDisplay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2040">
+              <caret line="146" column="56" selection-start-line="146" selection-start-column="56" selection-end-line="146" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/DeleteDisplay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Menu.java" />
+        <option value="$PROJECT_DIR$/src/Control.java" />
+        <option value="$PROJECT_DIR$/src/View.java" />
+        <option value="$PROJECT_DIR$/src/Model.java" />
+        <option value="$PROJECT_DIR$/src/Model/Model.java" />
+        <option value="$PROJECT_DIR$/src/View/View.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Control/Control.java" />
+        <option value="$PROJECT_DIR$/src/Model/ReadData.java" />
+        <option value="$PROJECT_DIR$/src/View/DisplayToSearch.java" />
+        <option value="$PROJECT_DIR$/src/View/Table.java" />
+        <option value="$PROJECT_DIR$/src/Model/InputData.java" />
+        <option value="$PROJECT_DIR$/src/Model/CreateData.java" />
+        <option value="$PROJECT_DIR$/src/Model/AllPecords.java" />
+        <option value="$PROJECT_DIR$/src/Controller/Control.java" />
+        <option value="$PROJECT_DIR$/src/View/DisplayToDelete.java" />
+        <option value="$PROJECT_DIR$/src/View/DisplayToDeleteNew.java" />
+        <option value="$PROJECT_DIR$/src/View/DisplayToSearchNew.java" />
+        <option value="$PROJECT_DIR$/src/View/RecordsTable.java" />
+        <option value="$PROJECT_DIR$/src/View/DisplayToDeleteNewest.java" />
+        <option value="$PROJECT_DIR$/src/View/ClassToAvoidDuplicates.java" />
+        <option value="$PROJECT_DIR$/src/View/DisplayToAdd.java" />
+        <option value="$PROJECT_DIR$/src/Controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Model/AllRecords.java" />
+        <option value="$PROJECT_DIR$/src/Model/Address.java" />
+        <option value="$PROJECT_DIR$/src/Model/MakerInfo.java" />
+        <option value="$PROJECT_DIR$/src/Model/ProductInfo.java" />
+        <option value="$PROJECT_DIR$/src/View/Parameters.java" />
+        <option value="$PROJECT_DIR$/src/Model/AllInfo.java" />
+        <option value="$PROJECT_DIR$/src/Dao/ReadData.java" />
+        <option value="$PROJECT_DIR$/src/Dao/InputData.java" />
+        <option value="$PROJECT_DIR$/src/View/MainDisplay.java" />
+        <option value="$PROJECT_DIR$/src/view/SearchDisplay.java" />
+        <option value="$PROJECT_DIR$/res.xml" />
+        <option value="$PROJECT_DIR$/src/model/AllInfo.java" />
+        <option value="$PROJECT_DIR$/src/view/RecordsTable.java" />
+        <option value="$PROJECT_DIR$/src/view/AddDisplay.java" />
+        <option value="$PROJECT_DIR$/src/view/ItemsTable.java" />
+        <option value="$PROJECT_DIR$/src/view/MainDisplay.java" />
+        <option value="$PROJECT_DIR$/src/view/SearchDisplayNew.java" />
+        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/view/Parameters.java" />
+        <option value="$PROJECT_DIR$/src/view/DeleteDisplay.java" />
+        <option value="$PROJECT_DIR$/src/dao/ReadData.java" />
+        <option value="$PROJECT_DIR$/src/dao/InputData.java" />
+        <option value="$PROJECT_DIR$/Records.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-3" />
+    <option name="y" value="-3" />
+    <option name="width" value="861" />
+    <option name="height" value="471" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LAB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LAB2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LAB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LAB2" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LAB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LAB2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LAB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LAB2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LAB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LAB2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LAB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LAB2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LAB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LAB2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553207770929" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/firsttaskepamlab-secondTask/firsttaskepamlab-secondTask" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="View" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="LAB2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="755f1803-99fd-48be-8033-b07a0b84eda3" name="Default Changelist" comment="" />
+      <created>1551438702637</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551438702637</updated>
+      <workItem from="1551438707552" duration="1279000" />
+      <workItem from="1551694687697" duration="594000" />
+      <workItem from="1552030183760" duration="606000" />
+      <workItem from="1552133471834" duration="3219000" />
+      <workItem from="1552253015027" duration="54000" />
+      <workItem from="1552296969691" duration="48830000" />
+      <workItem from="1552770416564" duration="17052000" />
+      <workItem from="1552898808576" duration="16512000" />
+      <workItem from="1552987132201" duration="10846000" />
+      <workItem from="1553237560591" duration="1151000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="100143000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26477733" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3285968" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Duplicate detector" order="12" weight="0.3285968" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3285968" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Menu.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/View.java" />
+    <entry file="file://$PROJECT_DIR$/src/Model/Model.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/DisplayToSearch.java" />
+    <entry file="file://$PROJECT_DIR$/src/View/DisplayToDelete.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/DisplayToDeleteNew.java" />
+    <entry file="file://$PROJECT_DIR$/result.xml" />
+    <entry file="file://$PROJECT_DIR$/newRecords.xml" />
+    <entry file="file://$PROJECT_DIR$/jh.xml" />
+    <entry file="file://$PROJECT_DIR$/LAB2.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/swt-4.10-win32-win32-x86_64/swt.jar!/org/eclipse/swt/widgets/Text.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="885" selection-start-line="885" selection-end-line="885" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/SearchDisplay.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/MakerInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ProductInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/swt-4.10-win32-win32-x86_64/swt.jar!/org/eclipse/swt/events/SelectionAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="52" column="64" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/SearchDisplayNew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/AddDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/ItemsTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Records.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="147" column="18" selection-start-line="147" selection-start-column="18" selection-end-line="147" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/ReadData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/InputData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="63" column="64" selection-start-line="63" selection-start-column="64" selection-end-line="63" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/Parameters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/MainDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="146" column="56" selection-start-line="146" selection-start-column="56" selection-end-line="146" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/DeleteDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/AllInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>LAB2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

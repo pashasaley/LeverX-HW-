@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog>
     <item>
+        <product>3</product>
+        <maker>3</maker>
+        <UNP>3</UNP>
+        <amount>3</amount>
+        <address>
+            <country>33</country>
+            <region>3</region>
+            <city>33</city>
+            <street>3</street>
+            <house>3</house>
+            <flat>null</flat>
+        </address>
+    </item>
+    <item>
         <product>Хлебушек</product>
         <maker>Кобринский хлебозавод</maker>
         <UNP>6</UNP>
@@ -11,51 +25,9 @@
             <city>Кобрин</city>
             <street>Советская</street>
             <house>4</house>
+            <flat>null</flat>
         </address>
     </item>
-
-    <item>
-        <product>Laptop</product>
-        <maker>Xiaomi</maker>
-        <UNP>36</UNP>
-        <amount>78</amount>
-        <address>
-            <country>Беларусь</country>
-            <region>Минская область</region>
-            <city>Минск</city>
-            <street>Мстиславца</street>
-            <house>11</house>
-        </address>
-    </item>
-
-    <item>
-        <product>Smartphone</product>
-        <maker>Xiaomi</maker>
-        <UNP>3</UNP>
-        <amount>780</amount>
-        <address>
-            <country>Беларусь</country>
-            <region>Минская область</region>
-            <city>Минск</city>
-            <street>Мстиславца</street>
-            <house>11</house>
-        </address>
-    </item>
-
-    <item>
-        <product>Earpods</product>
-        <maker>Xiaomi</maker>
-        <UNP>100</UNP>
-        <amount>34</amount>
-        <address>
-            <country>Беларусь</country>
-            <region>Минская область</region>
-            <city>Минск</city>
-            <street>Мстиславца</street>
-            <house>11</house>
-        </address>
-    </item>
-
     <item>
         <product>Earpods</product>
         <maker>Panasonic</maker>
@@ -70,7 +42,6 @@
             <flat>4</flat>
         </address>
     </item>
-
     <item>
         <product>Earpods</product>
         <maker>Apple</maker>
@@ -82,9 +53,9 @@
             <city>Минск</city>
             <street>Победителей</street>
             <house>9</house>
+            <flat>null</flat>
         </address>
     </item>
-
     <item>
         <product>Iphone</product>
         <maker>Apple</maker>
@@ -96,9 +67,9 @@
             <city>Минск</city>
             <street>Победителей</street>
             <house>9</house>
+            <flat>null</flat>
         </address>
     </item>
-
     <item>
         <product>MacBook</product>
         <maker>Apple</maker>
@@ -110,9 +81,9 @@
             <city>Минск</city>
             <street>Победителей</street>
             <house>9</house>
+            <flat>null</flat>
         </address>
     </item>
-
     <item>
         <product>IPad</product>
         <maker>Apple</maker>
@@ -124,9 +95,9 @@
             <city>Минск</city>
             <street>Победителей</street>
             <house>9</house>
+            <flat>null</flat>
         </address>
     </item>
-
     <item>
         <product>Ipod</product>
         <maker>Apple</maker>
@@ -138,9 +109,9 @@
             <city>Минск</city>
             <street>Победителей</street>
             <house>9</house>
+            <flat>null</flat>
         </address>
     </item>
-
     <item>
         <product>Iwatch</product>
         <maker>Apple</maker>
@@ -152,34 +123,7 @@
             <city>Минск</city>
             <street>Победителей</street>
             <house>9</house>
-        </address>
-    </item>
-
-    <item>
-        <product>MiBand</product>
-        <maker>Xiaomi</maker>
-        <UNP>90</UNP>
-        <amount>нет на складе</amount>
-        <address>
-            <country>Беларусь</country>
-            <region>Минская область</region>
-            <city>Минск</city>
-            <street>Мстиславца</street>
-            <house>11</house>
-        </address>
-    </item>
-
-    <item>
-        <product>Bag</product>
-        <maker>Xiaomi</maker>
-        <UNP>13</UNP>
-        <amount>98</amount>
-        <address>
-            <country>Беларусь</country>
-            <region>Минская область</region>
-            <city>Минск</city>
-            <street>Мстиславца</street>
-            <house>11</house>
+            <flat>null</flat>
         </address>
     </item>
 </catalog>

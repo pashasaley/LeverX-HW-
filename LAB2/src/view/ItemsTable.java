@@ -1,49 +1,57 @@
-package View;
+package view;
 
-import Model.CreateData;
+import model.AllInfo;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.*;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class RecordsTable {
-
-    private Display display = MainDisplay.display;
-    private ArrayList<CreateData> records;
+public class ItemsTable {
+    public static final int BUTTON_SIZE = 24;
+    private List<AllInfo> items;
     private static final int Y = 15;
 
-    public RecordsTable(ArrayList<CreateData> studs) {
-        records = new ArrayList<>();
-        records = studs;
+    public ItemsTable(ArrayList<AllInfo> studs) {
+        items = new ArrayList<>();
+        items = studs;
     }
 
-    public void setTable(Shell shell) {
+    public void setTable(Shell shell, Display display) {
 
-        org.eclipse.swt.widgets.Table table = new org.eclipse.swt.widgets.Table
+        Table table = new org.eclipse.swt.widgets.Table
                 (shell, SWT.SINGLE | SWT.FULL_SELECTION | SWT.V_SCROLL | SWT.H_SCROLL);
 
         Button nextPage = new Button(shell, SWT.PUSH);
-        nextPage.setBounds(330,Y,24,24);
+        nextPage.setBounds(410,Y, BUTTON_SIZE, BUTTON_SIZE);
         nextPage.setImage(new Image(display, "images/next.png"));
 
         Label page = new Label(shell, SWT.NONE);
         page.setText("Страница");
-        page.setBounds(140,Y,70,40);
+        page.setBounds(220,Y,70,40);
 
         Label currentPage = new Label(shell, SWT.CENTER);
-        currentPage.setBounds(210,Y,40,40);
+        currentPage.setBounds(290,Y,40,40);
 
         Label of = new Label(shell, SWT.NONE);
         of.setText("из");
-        of.setBounds(250,Y,40,40);
+        of.setBounds(330,Y,40,40);
 
         Label pages = new Label(shell, SWT.NONE);
-        pages.setBounds(290,Y,40,40);
+        pages.setBounds(370,Y,40,40);
+
+        Button firstPage = new Button(shell, SWT.PUSH);
+        firstPage.setBounds(140, Y, BUTTON_SIZE, BUTTON_SIZE);
+        firstPage.setImage(new Image(display, "images/first.png"));
+
+        Button lastPage = new Button(shell, SWT.PUSH);
+        lastPage.setBounds(440, Y, BUTTON_SIZE, BUTTON_SIZE);
+        lastPage.setImage(new Image(display, "images/last.png"));
 
         Button prevPage = new Button(shell, SWT.PUSH);
-        prevPage.setBounds(110, Y, 24, 24);
+        prevPage.setBounds(190, Y, BUTTON_SIZE, BUTTON_SIZE);
         prevPage.setImage(new Image(display, "images/previous.png"));
 
         Label showNotes = new Label(shell, SWT.NONE);
@@ -65,13 +73,34 @@ public class RecordsTable {
                     message.setText("Ошибка");
                     message.open();
                 } else {
-                    if (Integer.parseInt(numCurrNotes.getText()) <= records.size() && Integer.parseInt(numCurrNotes.getText()) > 0) {
+                    if (Integer.parseInt(numCurrNotes.getText()) <= items.size() &&
+                            Integer.parseInt(numCurrNotes.getText()) > 0) {
                         currentPage.setText("1");
-                        showNotes(table, records, Integer.parseInt(numCurrNotes.getText()) * (Integer.parseInt(currentPage.getText()) - 1), Integer.parseInt(numCurrNotes.getText()) * Integer.parseInt(currentPage.getText()));
-                        int page = (int) Math.ceil((double) records.size() / Double.parseDouble(numCurrNotes.getText()));
+                        showNotes(table, (ArrayList<AllInfo>) items,
+                                Integer.parseInt(numCurrNotes.getText()) *                                (Integer.parseInt(currentPage.getText()) - 1),
+                                Integer.parseInt(numCurrNotes.getText()) *
+                                        Integer.parseInt(currentPage.getText()));
+                        int page = (int) Math.ceil((double) items.size() /
+                                Double.parseDouble(numCurrNotes.getText()));
                         pages.setText(String.valueOf(page));
                     }
                 }
+            }
+        });
+
+        firstPage.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                currentPage.setText(String.valueOf(1));
+                changePage(table, currentPage,pages, numCurrNotes);
+            }
+        });
+
+        lastPage.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                currentPage.setText(pages.getText());
+                changePage(table,currentPage, pages, numCurrNotes);
             }
         });
 
@@ -81,14 +110,7 @@ public class RecordsTable {
                 if(Integer.parseInt(currentPage.getText()) >= 2) {
                     currentPage.setText(String.valueOf(Integer.parseInt(currentPage.getText()) - 1));
                 }
-                if(Integer.parseInt(currentPage.getText()) < Integer.parseInt(pages.getText())) {
-                    showNotes(table, records, Integer.parseInt(numCurrNotes.getText())*(Integer.parseInt(currentPage.getText())-1),
-                            Integer.parseInt(numCurrNotes.getText())*(Integer.parseInt(currentPage.getText())));
-                }
-                else if(Integer.parseInt(currentPage.getText()) == Integer.parseInt(pages.getText())){
-                    showNotes(table, records, Integer.parseInt(numCurrNotes.getText())*(Integer.parseInt(currentPage.getText())-1),
-                            records.size());
-                }
+                changePage(table, currentPage,pages, numCurrNotes);
             }
 
         });
@@ -98,19 +120,13 @@ public class RecordsTable {
             public void widgetSelected(SelectionEvent selectionEvent) {
                 if(Integer.parseInt(currentPage.getText()) < Integer.parseInt(pages.getText())) {
                     currentPage.setText(String.valueOf(Integer.parseInt(currentPage.getText()) + 1));
-                    showNotes(table, records,
-                            Integer.parseInt(numCurrNotes.getText())*(Integer.parseInt(currentPage.getText())-1),
-                            Integer.parseInt(numCurrNotes.getText())*(Integer.parseInt(currentPage.getText())));
                 }
-                else if(Integer.parseInt(currentPage.getText()) == Integer.parseInt(pages.getText())){
-                    showNotes(table, records, Integer.parseInt(numCurrNotes.getText())*(Integer.parseInt(currentPage.getText())-1),
-                            records.size());
-                }
+                changePage(table, currentPage,pages, numCurrNotes);
             }
 
         });
 
-        table.setBounds(160,60,1330,400);
+        table.setBounds(240,60,1330,370);
         table.setHeaderVisible(true);
         table.setLinesVisible(true);
 
@@ -141,18 +157,31 @@ public class RecordsTable {
         shell.pack();
     }
 
-    public void showNotes(Table table, ArrayList<CreateData> records, int startElement, int endElement) {
+    public void changePage(Table table, Label currentPage, Label pages, Text numCurrNotes){
+        if(Integer.parseInt(currentPage.getText()) < Integer.parseInt(pages.getText())) {
+            showNotes(table, (ArrayList<AllInfo>) items, Integer.parseInt(numCurrNotes.getText())*
+                            (Integer.parseInt(currentPage.getText())-1),
+                    Integer.parseInt(numCurrNotes.getText())*
+                            (Integer.parseInt(currentPage.getText())));
+        }
+        else if(Integer.parseInt(currentPage.getText()) == Integer.parseInt(pages.getText())){
+            showNotes(table, (ArrayList<AllInfo>) items, Integer.parseInt(numCurrNotes.getText())*
+                    (Integer.parseInt(currentPage.getText())-1), items.size());
+        }
+    }
+
+    public void showNotes(Table table, ArrayList<AllInfo> items, int startElement, int endElement) {
         table.removeAll();
         table.clearAll();
         int counter = startElement+1;
-        for (CreateData record : records.subList(startElement, endElement)){
+        for (AllInfo record : items.subList(startElement, endElement)){
             TableItem tableItem = new TableItem(table, SWT.PUSH);
             tableItem.setText(0, String.valueOf(counter++));
-            tableItem.setText(1, record.getProduct());
-            tableItem.setText(2, record.getMaker());
-            tableItem.setText(3, String.valueOf(record.getUNP()));
-            tableItem.setText(4, String.valueOf(record.getAmount()));
-            tableItem.setText(5, record.getAddress());
+            tableItem.setText(1, record.productInfo.getProduct());
+            tableItem.setText(2, record.makerInfo.getMaker());
+            tableItem.setText(3, String.valueOf(record.makerInfo.getUNP()));
+            tableItem.setText(4, String.valueOf(record.productInfo.getAmount()));
+            tableItem.setText(5, record.address.getAddress());
         }
     }
 }

@@ -1,15 +1,24 @@
-package Model;
+package dao;
 
+import controller.Controller;
+import model.AllInfo;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.FileDialog;
+import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.swt.widgets.Shell;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReadData extends DefaultHandler{
-    private static final String RECORDS_TAG = "records";
-    private static final String RECORD_TAG = "record";
+    private static final String RECORDS_TAG = "catalog";
+    private static final String RECORD_TAG = "item";
     private static final String PRODUCT_TAG = "product";
     private static final String MAKER_TAG = "maker";
     private static final String UNP_TAG = "UNP";
@@ -21,12 +30,34 @@ public class ReadData extends DefaultHandler{
     private static final String HOUSE_TAG = "house";
     private static final String FLAT_TAG = "flat";
 
-    private List<CreateData> records;
-    private CreateData record;
+    private List<AllInfo> records;
+    private AllInfo record;
     private String currentElement;
 
-    public List<CreateData> getRecords() {
+    public List<AllInfo> getRecords() {
         return records;
+    }
+
+    public static void openFile(Shell shell, Controller controller){
+        FileDialog fileDialog = new FileDialog(shell, SWT.SAVE);
+        fileDialog.setText("Открыть");
+        fileDialog.setFilterPath("C:\\");
+        String[] fileExtension = {"*.xml"};
+        fileDialog.setFilterExtensions(fileExtension);
+        String file = fileDialog.open();
+        if(file == null){
+            MessageBox warning = new MessageBox(shell);
+            warning.setMessage("Не выбран файл");
+            warning.setText("Ошибка");
+            warning.open();
+        }
+        else {
+            try {
+                controller.openFile(new File(file));
+            } catch (ParserConfigurationException | SAXException | TransformerException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
@@ -37,7 +68,7 @@ public class ReadData extends DefaultHandler{
                 records = new ArrayList<>();
             }break;
             case RECORD_TAG: {
-                record = new CreateData();
+                record = new AllInfo();
             }break;
         }
     }
@@ -89,43 +120,43 @@ public class ReadData extends DefaultHandler{
         }
         switch (currentElement) {
             case PRODUCT_TAG:{
-                record.setProduct(text);
+                record.productInfo.setProduct(text);
             }break;
 
             case MAKER_TAG:{
-                record.setMaker(text);
+                record.makerInfo.setMaker(text);
             }break;
 
             case UNP_TAG:{
-                record.setUNP(Integer.valueOf(text));
+                record.makerInfo.setUNP(Integer.valueOf(text));
             }break;
 
             case AMOUNT_TAG:{
-                record.setAmount(text);
+                record.productInfo.setAmount(text);
             }break;
 
             case COUNTRY_TAG:{
-                record.setCountry(text);
+                record.address.setCountry(text);
             }break;
 
             case REGION_TAG:{
-                record.setRegion(text);
+                record.address.setRegion(text);
             }break;
 
             case CITY_TAG:{
-                record.setCity(text);
+                record.address.setCity(text);
             }break;
 
             case STREET_TAG:{
-                record.setStreet(text);
+                record.address.setStreet(text);
             }break;
 
             case HOUSE_TAG:{
-                record.setHouse(Integer.valueOf(text));
+                record.address.setHouse(Integer.valueOf(text));
             }break;
 
             case FLAT_TAG:{
-                record.setFlat(Integer.valueOf(text));
+                record.address.setFlat(Integer.valueOf(text));
             }break;
         }
     }
