@@ -1,7 +1,6 @@
 package blog.service;
 
 import blog.model.Article;
-import blog.model.User;
 import blog.repository.AbstractRepository;
 import blog.repository.ArticleRepositoryImpl;
 
@@ -10,22 +9,30 @@ import java.util.List;
 
 public class ArticleServiceImpl implements ArticleService {
     private AbstractRepository<Article> articleRepository = new ArticleRepositoryImpl();
+    private Integer id = 0;
 
     @Override
-    public boolean update(Article article, Integer authorId){
-        return article.getAuthotId().equals(authorId);
+    public boolean update(Integer id, Integer authorId, String newText){
+        boolean updated = false;
+        for (Article article : articleRepository.getAll()){
+            if(article.getAuthotId().equals(authorId) && article.getId().equals(id)){
+                article.setText(newText);
+                updated = true;
+            }
+        }
+        return updated;
     }
 
     @Override
     public void save(Article article){
-        if (article!=null){
-            List<Article> articles = articleRepository.getAll();
-            if(!articles.isEmpty()){
-                Article lastArticle = articles.get(articles.size() - 1);
-                article.setId(lastArticle.getId());
-                articleRepository.save(article);
-            }
-        }
+        article.setId(id);
+        id++;
+        articleRepository.create(article);
+    }
+
+    @Override
+    public void changeStatus(Integer id, Article.Status status) {
+        articleRepository.getById(id).setStatus(status);
     }
 
     @Override
@@ -40,10 +47,10 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public List<Article> getMyArticle(User user){
+    public List<Article> getMyArticle(Integer id){
         List<Article> myArticle = new ArrayList<>();
         for(Article article : articleRepository.getAll()){
-            if(user.getId().equals(article.getAuthotId())){
+            if(id.equals(article.getAuthotId())){
                 myArticle.add(article);
             }
         }
@@ -51,11 +58,20 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public void delete(User user) {
+    public boolean delete(Integer id, Integer authorId) {
+        boolean deleted = false;
         for(Article article : articleRepository.getAll()){
-            if(user.getId().equals(article.getAuthotId())){
+            if(authorId.equals(article.getAuthotId()) && id.equals(article.getId())){
                 articleRepository.getAll().remove(article);
+                deleted = true;
+                break;
             }
         }
+        return deleted;
+    }
+
+    @Override
+    public Integer getAuthorById(Integer id) {
+        return articleRepository.getById(id).getAuthotId();
     }
 }

@@ -9,7 +9,7 @@ public class ArticleRepositoryImpl implements AbstractRepository<Article> {
     private List<Article> articles = new ArrayList<>();
 
     @Override
-    public void save(Article article) {
+    public void create(Article article) {
         articles.add(article);
     }
 
@@ -21,5 +21,10 @@ public class ArticleRepositoryImpl implements AbstractRepository<Article> {
     @Override
     public void delete(Article article) {
         articles.remove(article);
+    }
+
+    @Override
+    public Article getById(Integer id) {
+        return articles.get(id);
     }
 }

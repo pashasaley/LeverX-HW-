@@ -1,14 +1,15 @@
 package blog.service;
 
-import blog.model.Article;
 import blog.model.Comment;
 
 import java.util.List;
 
 public interface CommentService {
-    void save(Comment comment, Article article);
+    void save(Comment comment);
 
-    List<Comment> getPostComments(Article article);
+    //Comment getById(Integer id);
 
-    void deleteComment(Article article);
+    List<Comment> getPostComments(Integer id);
+
+    boolean delete(Integer postId, Integer AuthorId);
 }

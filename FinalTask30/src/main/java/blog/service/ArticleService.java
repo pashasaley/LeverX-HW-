@@ -1,18 +1,21 @@
 package blog.service;
 
 import blog.model.Article;
-import blog.model.User;
 
 import java.util.List;
 
 public interface ArticleService {
-    boolean update(Article article, Integer authorId);
+    boolean update(Integer id, Integer authorId, String newText);
 
     void save(Article article);
 
+    void changeStatus(Integer id, Article.Status status);
+
     List<Article> getPublicArticle();
 
-    List<Article> getMyArticle(User user);
+    List<Article> getMyArticle(Integer id);
 
-    void delete(User user);
+    boolean delete(Integer id, Integer authorId);
+
+    Integer getAuthorById(Integer id);
 }

@@ -2,10 +2,9 @@ package blog.model;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 public class Article {
-    //@CreatedBy
-    //@LastModifiedBy
     public Integer id;
     public Integer authotId;
     @NotNull

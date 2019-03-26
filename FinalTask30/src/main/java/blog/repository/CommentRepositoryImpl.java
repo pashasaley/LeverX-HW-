@@ -1,6 +1,5 @@
 package blog.repository;
 
-import blog.model.Article;
 import blog.model.Comment;
 
 import java.util.ArrayList;
@@ -9,7 +8,7 @@ import java.util.List;
 public class CommentRepositoryImpl implements AbstractRepository<Comment> {
     private List<Comment> comments = new ArrayList<>();
     @Override
-    public void save(Comment comment) {
+    public void create(Comment comment) {
         comments.add(comment);
     }
 
@@ -21,5 +20,10 @@ public class CommentRepositoryImpl implements AbstractRepository<Comment> {
     @Override
     public void delete(Comment comment) {
         comments.remove(comment);
+    }
+
+    @Override
+    public Comment getById(Integer id) {
+        return comments.get(id);
     }
 }

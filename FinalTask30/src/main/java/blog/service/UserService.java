@@ -2,15 +2,17 @@ package blog.service;
 
 import blog.model.User;
 
-import java.util.List;
-
 public interface UserService {
 
+    boolean checkUser(String email, String password);
+
+    boolean checkEmail(String email);
+
+    boolean reset(Integer code, String newPassword);
+
+    Integer generateCode(String email);
+
     void save(User user);
-
-    void delete(User order);
-
-    List<User> getAll();
 
     User getById(Integer id);
 }

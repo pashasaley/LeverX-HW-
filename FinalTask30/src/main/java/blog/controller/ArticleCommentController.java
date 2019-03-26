@@ -2,11 +2,7 @@ package blog.controller;
 
 import blog.model.Article;
 import blog.model.Comment;
-import blog.model.Tag;
-import blog.service.ArticleService;
-import blog.service.ArticleServiceImpl;
-import blog.service.CommentService;
-import blog.service.CommentServiceImpl;
+import blog.service.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/articles", produces = MediaType.APPLICATION_JSON_VALUE)
-public class ArticleAndCommentController {
+public class ArticleCommentController {
     private ArticleService articleService = new ArticleServiceImpl();
     private CommentService commentService = new CommentServiceImpl();
 
@@ -44,10 +40,10 @@ public class ArticleAndCommentController {
         return new ResponseEntity<>(commentService.getPostComments(postId).get(id), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/{postId}/comments/{id}")//don't work
+    @DeleteMapping(value = "/{postId}/comments/{id}")
     public ResponseEntity<String> deleteComment(@PathVariable Integer postId,
                                                 @PathVariable Integer authorId){
-        return new ResponseEntity<String>(commentService.delete(postId, authorId) ? "Success" :
+        return new ResponseEntity<>(commentService.delete(postId, authorId) ? "Success" :
                 "Your are not the author of the article",  HttpStatus.NO_CONTENT);
     }
 
@@ -56,14 +52,12 @@ public class ArticleAndCommentController {
             @RequestParam(value = "id")Integer authorId,
             @RequestParam(value="title") String title,
             @RequestParam(value = "text") String text,
-            @RequestParam(value = "status") Article.Status status,
-            @RequestParam(value = "tags") List<Tag> tags){
+            @RequestParam(value = "status") Article.Status status){
         Article article = new Article();
         article.setAuthotId(authorId);
         article.setText(text);
         article.setTitle(title);
         article.setStatus(status);
-        article.setTags(tags);
         articleService.save(article);
         return new ResponseEntity<>(article, HttpStatus.OK);
     }
@@ -73,20 +67,27 @@ public class ArticleAndCommentController {
         return new ResponseEntity<>(articleService.getPublicArticle(), HttpStatus.OK);
     }
 
+    @GetMapping("/changeStatus/{id}")
+    public ResponseEntity changeStatus(@PathVariable Integer id,
+                                               @RequestParam(value = "status") Article.Status status){
+        articleService.changeStatus(id,status);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
     @GetMapping("/my")
     public ResponseEntity<List<Article>> getUsersArticle(
             @RequestParam(value = "id") Integer id){
         return new ResponseEntity<>(articleService.getMyArticle(id), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/{id}")//don't work
+    @DeleteMapping(value = "/{id}")
     public ResponseEntity<String> deleteArticle(@PathVariable Integer authorId,
                                                 @RequestParam(value = "postId") Integer id){
         return new ResponseEntity<String>(articleService.delete(id, authorId) ? "Success" :
                 "Your are not the author of the article",  HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping(value = "/{id}")//consumes and produces - wtf??
+    @PutMapping(value = "/{id}")
     public ResponseEntity<String> updateArticle(@PathVariable Integer id,
                                                 @RequestParam(value = "postId") Integer postId,
                                                 @RequestParam(value = "newText") String newText) {
